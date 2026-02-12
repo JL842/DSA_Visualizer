@@ -16,12 +16,11 @@ import javafx.util.Duration;
 
 public class Main extends Application {
 
+    Stage Window;
+
     public static void main(String[] args) {
 
-        launch(args);
-
-
-
+        Main main = new Main();
 
     }
 
@@ -31,7 +30,7 @@ public class Main extends Application {
         Scene scene = new Scene(new GridPane());
         int[] data = {1,3,2,9,8,6,5,4};
 
-        BubbleSort bubbleSort = new BubbleSort(data);
+        BubbleSort bubbleSort = new BubbleSort(data, stage, scene);
         System.out.println(Arrays.toString(bubbleSort.currentData));
         bubbleSort.startAlgorithm();
         System.out.println(Arrays.toString(bubbleSort.currentData));
@@ -52,17 +51,18 @@ public class Main extends Application {
 
         stage.setScene(myscene);
 
-
-
         stage.show();
 
+        start.setOnAction(e -> stage.setScene(bubbleSort.scene));
 
-        PauseTransition delay = new PauseTransition(Duration.seconds(5));
-        delay.setOnFinished(e -> {
-            stage.setScene(bubbleSort.createPage());
-        });
 
-        delay.play();
+
+//        PauseTransition delay = new PauseTransition(Duration.seconds(5));
+//        delay.setOnFinished(e -> {
+//            stage.setScene(bubbleSort.createPage());
+//        });
+
+      //  delay.play();
 
 
     }

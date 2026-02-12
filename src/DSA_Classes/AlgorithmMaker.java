@@ -1,6 +1,8 @@
 package DSA_Classes;
 
+import Pages.Page;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public interface AlgorithmMaker {
 
