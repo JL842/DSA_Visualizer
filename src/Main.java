@@ -1,13 +1,18 @@
 import java.util.Arrays;
 
+import com.sun.javafx.scene.control.ContextMenuContent;
 import javafx.animation.PauseTransition;
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import DSA_Classes.BubbleSort;
@@ -16,54 +21,59 @@ import javafx.util.Duration;
 
 public class Main extends Application {
 
-    Stage Window;
+
 
     public static void main(String[] args) {
 
-        Main main = new Main();
+        launch(args);
 
     }
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        Scene scene = new Scene(new GridPane());
-        int[] data = {1,3,2,9,8,6,5,4};
-
-        BubbleSort bubbleSort = new BubbleSort(data, stage, scene);
-        System.out.println(Arrays.toString(bubbleSort.currentData));
-        bubbleSort.startAlgorithm();
-        System.out.println(Arrays.toString(bubbleSort.currentData));
-
-
-
-        Button start = new Button("Start");
-
-        HBox hbox = new HBox(); // Purpose: Simply for alignments for the button.
-        hbox.getChildren().add(start);
-        hbox.setAlignment(Pos.BOTTOM_RIGHT);
-        hbox.setPadding(new Insets(0,20,20,0)); // OFFSETS: UP, RIGHT, DOWN,LEFT
+        ////////////// Bubble sort UI prototype test
 
         GridPane root = new GridPane();
-        root.getChildren().add(hbox);
+        root.setPadding(new Insets(20,20,20,20)); // Outer padding
+        root.setHgap(3); // Inner horizontal padding
+        root.setVgap(3); // Inner Vertical padding
 
-        Scene myscene = new Scene(root,700,250); // Holds all UI components
+        root.setGridLinesVisible(true);
 
-        stage.setScene(myscene);
+        HBox graphBox = new HBox();
+        graphBox.setMinSize(600,200);
 
+        graphBox.setSpacing(10);
+
+        TextField text = new TextField();
+        Button sortButton = new Button();
+        sortButton.setOnAction(e -> System.out.println("Button clicked"));
+
+        Text complexityText = new Text("Complexity");
+        Text speedText = new Text("Speed changer");
+        Button backButton = new Button("Back");
+        Text placeholderText = new Text("Placeholder");
+
+        graphBox.getChildren().add(placeholderText);
+
+
+        root.add(graphBox,0,0,1,2);
+        root.add(sortButton,0,2);
+        root.add(complexityText,1,0);
+        root.add(speedText,1,1);
+        root.add(backButton,1,2);
+
+
+        /////////////////////////////
+
+        Scene scene = new Scene(root,700,300);
+
+
+
+        stage.setScene(scene);
+        stage.setTitle("Bubble sort");
         stage.show();
-
-        start.setOnAction(e -> stage.setScene(bubbleSort.scene));
-
-
-
-//        PauseTransition delay = new PauseTransition(Duration.seconds(5));
-//        delay.setOnFinished(e -> {
-//            stage.setScene(bubbleSort.createPage());
-//        });
-
-      //  delay.play();
-
 
     }
 }

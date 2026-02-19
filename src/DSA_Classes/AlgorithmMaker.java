@@ -23,7 +23,7 @@ public interface AlgorithmMaker {
     }
 
 
-    public Scene createPage();
+    public void createPage();
 
 
 

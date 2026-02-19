@@ -1,3 +1,47 @@
+
+
+
+
+## Architecture and structure
+
+---
+
+<font size="3">
+10/02/2026
+
+My biggest mistake so far was jumping right into the coding with minimal planning and after so clear flaws in my structure
+given that it looked a mess and not a clear idea on scaling the project. After some research instead of writing the UI
+in the code I should use FXML but use SceneBuilder to separate UI from backend process.
+
+Also the approach of splitting the structure into modal, controller and view to better organise my code and maintability
+over this course of creating this I believe however further research into this is needed.
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# FXML Notes
+
+
+
+
+
+
 # JavaFX notes
 
 ---

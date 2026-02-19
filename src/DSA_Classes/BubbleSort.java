@@ -24,9 +24,7 @@ public class BubbleSort implements AlgorithmMaker {
     int[] CompletedData;
     String Title;
 
-    public Stage stage;
-    public Scene mainScene;
-    public Scene scene;
+
 
     //config
     boolean pause = false; // For the future we need the algorithm to stop
@@ -37,29 +35,16 @@ public class BubbleSort implements AlgorithmMaker {
     public BubbleSort(int[] startData, Stage stage, Scene scene) {
         this.startData = startData;
         this.currentData = startData;
-        this.mainScene = scene;
-        this.stage = stage;
+
         this.createPage();
     }
 
     // Generate a page specifically for displaying bubble sort and also passes the reference to the main stage and scene
-    public Scene createPage() {
+    public void createPage() {
 
 
-        Button button = new Button("Bubble Sort");
-        GridPane gridPane = new GridPane();
-        gridPane.gridLinesVisibleProperty().set(true);
-
-        HBox hBox = new HBox(button);
 
 
-        gridPane.add(hBox, 0, 0, 2, 1);
-
-        button.setOnAction(e -> stage.setScene(mainScene));
-
-        this.scene = new Scene(gridPane, 700, 400);
-        System.out.println("Changed page ");
-        return scene;
     }
 
 
