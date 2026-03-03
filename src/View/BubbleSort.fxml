@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Resources.BubbleSort"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BubbleSort_Controller">
+   <children>
+      <Button fx:id="myButton" layoutX="486.0" layoutY="346.0" mnemonicParsing="false" onAction="#clicked" prefHeight="40.0" prefWidth="100.0" text="Back to main page">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="293.0" prefWidth="413.0" />
+   </children>
 </AnchorPane>

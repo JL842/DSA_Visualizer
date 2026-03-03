@@ -39,6 +39,7 @@ over this course of creating this I believe however further research into this i
 
 
 
+--- 
 
 
 
@@ -64,3 +65,27 @@ properties and methods:
 - setFillHeight()
 - setSpacing()
 - setPadding()
+
+
+
+### Random Tips 
+
+## How to change the scene 
+
+One way that is considered bab practice is the image below; we get the *Window()* which is the direct ancestor to the 
+Scene therefore we can set the scene from there and swap scenes from there.
+
+![img.png](img.png)
+
+Its back practice because in https://www.pragmaticcoding.ca/javafx/swap-scenes it says you should not
+
+1. Don’t reach up into a parent.
+2. Don’t peak inside a child.
+
+
+
+
+## Good Sources
+### JavaFX
+
+https://moldstud.com/articles/p-javafx-project-hierarchy-tips-for-better-organization-streamline-your-development-process

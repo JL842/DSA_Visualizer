@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane cache="true" onMouseClicked="#clicked" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainPage_Controller">
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="TOP" ellipsisString="." layoutX="130.0" layoutY="41.0" prefHeight="178.0" prefWidth="339.0" text="Algorthim &amp; Data structure visualizer " textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="System Bold" size="51.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.8863636363636364" startY="0.31439393849083863">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5093957185745239" green="0.7894411683082581" blue="0.9894737005233765" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007680491551459294">
+                     <color>
+                        <Color red="0.5093957185745239" green="0.7894411683082581" blue="0.9894737005233765" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.947772657450077">
+                     <color>
+                        <Color red="0.9162085652351379" green="0.12417154014110565" blue="0.9578947424888611" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9638130686517782">
+                     <color>
+                        <Color red="0.5549785494804382" green="0.5436257123947144" blue="0.8842105269432068" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="myButton" layoutX="174.0" layoutY="219.0" mnemonicParsing="false" onAction="#clicked" prefHeight="100.0" prefWidth="250.0" text="Button" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,4 +1,4 @@
-package DSA_Classes;
+package Controller.DSA_Classes;
 
 public enum DSA {
     BUBBLE_SORT;

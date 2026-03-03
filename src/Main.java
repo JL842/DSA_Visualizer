@@ -1,79 +1,39 @@
-import java.util.Arrays;
-
-import com.sun.javafx.scene.control.ContextMenuContent;
-import javafx.animation.PauseTransition;
-
+import Controller.PageManger;
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import DSA_Classes.BubbleSort;
-import javafx.util.Duration;
 
 
 public class Main extends Application {
 
-
-
-    public static void main(String[] args) {
-
-        launch(args);
-
-    }
+    private Scene scene;
 
     @Override
     public void start(Stage stage) throws Exception {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("View/MainPage_View.fxml"));
 
-        ////////////// Bubble sort UI prototype test
+    Parent root = loader.load();
 
-        GridPane root = new GridPane();
-        root.setPadding(new Insets(20,20,20,20)); // Outer padding
-        root.setHgap(3); // Inner horizontal padding
-        root.setVgap(3); // Inner Vertical padding
+     scene = new Scene(root, Color.LIGHTBLUE);
+     System.out.println(root);
+     PageManger pageManger = new PageManger(scene,root, loader);
+     System.out.println(pageManger);
 
-        root.setGridLinesVisible(true);
-
-        HBox graphBox = new HBox();
-        graphBox.setMinSize(600,200);
-
-        graphBox.setSpacing(10);
-
-        TextField text = new TextField();
-        Button sortButton = new Button();
-        sortButton.setOnAction(e -> System.out.println("Button clicked"));
-
-        Text complexityText = new Text("Complexity");
-        Text speedText = new Text("Speed changer");
-        Button backButton = new Button("Back");
-        Text placeholderText = new Text("Placeholder");
-
-        graphBox.getChildren().add(placeholderText);
-
-
-        root.add(graphBox,0,0,1,2);
-        root.add(sortButton,0,2);
-        root.add(complexityText,1,0);
-        root.add(speedText,1,1);
-        root.add(backButton,1,2);
-
-
-        /////////////////////////////
-
-        Scene scene = new Scene(root,700,300);
-
-
-
-        stage.setScene(scene);
-        stage.setTitle("Bubble sort");
-        stage.show();
+    stage.setTitle("DSA Visualizer");
+    stage.setScene(scene);
+    stage.show();
 
     }
+
+
+
+
+    public static void main(String[] args) {
+    launch(args);
+}
+
+
 }

@@ -1,11 +1,11 @@
 # TO DO CHECK LIST
 
-## Week 1.
+## Actually starting now Week 1 23/02/2026
 
-1. ~~Understand Bubble sort~~ 
-2. ~~Create the Bubble sort algorithm~~
-3. Figure out how to make nodes like in W3schools example, 
-4. Give the option of how many nodes, no duplicates and if the user wants to input their own nodes.
-
-If we can just do this and be able to produce a visualiser then creating & organising different algorithms would 
-come next. 
+1. ~~Set up a main page~~
+2. ~~Made a button~~
+3. Switch scenes to the bubble sort page
+4. Go back to the main page
+5. Create the bubble sort algorithm
+6. Allow to take input then display the sorting algorithm step by step
+7. 
